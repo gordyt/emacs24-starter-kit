@@ -1,0 +1,45 @@
+#+TITLE: gordy
+
+* Settings for the "gordy" username
+** Lisp Setting
+#+BEGIN_SRC emacs-lisp
+;;; This enables the use of clisp in emacs
+(setq inferior-lisp-program "/usr/local/bin/clisp -q")
+;;; This enables the use of sbcl in emacs
+;(setq inferior-lisp-program "/usr/local/bin/sbcl --noinform --no-linedit")
+#+END_SRC
+** Org-Mode Settings
+#+BEGIN_SRC emacs-lisp
+  (setq org-enforce-todo-dependencies 't)
+  (setq org-global-properties '(
+                                ("Effort_ALL". "1:00
+  2:00 3:00 4:00 5:00 6:00 7:00 8:00")
+                                ("COLUMNS" . "%4TODO %60ITEM(Task)
+                                %6EFFORT(Est.){:}
+                                %6CLOCKSUM(Actual){:}")
+                                ))
+  (setq org-tag-alist '(("@agenda" . ?g) 
+                        ("@anywhere" . ?a) 
+                        ("@call" . ?l) 
+                        ("@computer" . ?c) 
+                        ("@errand" . ?e) 
+                        ("@home" . ?h) 
+                        ("@waiting-for" . ?f) 
+                        ("@work" . ?w)))
+#+END_SRC
+
+** Python Settings
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/Users/gordy/Projects/p/python-mode.el-6.0.3/");
+(starter-kit-load "python")
+#+END_SRC
+
+** SLIME Settings
+#+BEGIN_SRC emacs-lisp
+;;; Enable SLIME integration
+(add-to-list 'load-path "/Users/gordy/Projects/s/slime/slime-2011-12-01/")  ; your SLIME directory
+(require 'slime-autoloads)
+(slime-setup)
+#+END_SRC
+
+     

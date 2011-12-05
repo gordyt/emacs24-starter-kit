@@ -1,0 +1,16 @@
+#+TITLE: gordy29.local
+
+* Settings for "gordy29.local"
+** Org-Mode Settings
+#+BEGIN_SRC emacs-lisp
+  (setq org-directory "~/Dropbox/org")
+  (setq org-agenda-files (list (concat org-directory "/home.org")
+                               (concat org-directory "/notes.org")
+                               (concat org-directory "/someday.org")
+                               (concat org-directory "/tasks.org")
+                               (concat org-directory "/work.org")))
+  
+  (setq org-mobile-directory "~/Dropbox/MobileOrg")
+  
+#+END_SRC
+
