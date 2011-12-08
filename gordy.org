@@ -10,6 +10,7 @@
 #+END_SRC
 ** Org-Mode Settings
 #+BEGIN_SRC emacs-lisp
+  (starter-kit-load "misc")
   (setq org-enforce-todo-dependencies 't)
   (setq org-global-properties '(
                                 ("Effort_ALL". "1:00
@@ -30,14 +31,16 @@
 
 ** Python Settings
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path "/Users/gordy/Projects/p/python-mode.el-6.0.3/");
+(add-to-list 'load-path "modules/python-mode/")
+(setq py-install-directory "modules/python-mode/")
+(require 'python-mode)
 (starter-kit-load "python")
 #+END_SRC
 
 ** SLIME Settings
 #+BEGIN_SRC emacs-lisp
 ;;; Enable SLIME integration
-(add-to-list 'load-path "/Users/gordy/Projects/s/slime/slime-2011-12-01/")  ; your SLIME directory
+(add-to-list 'load-path (concat starter-kit-dir "modules/slime"))
 (require 'slime-autoloads)
 (slime-setup)
 #+END_SRC
