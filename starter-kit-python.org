@@ -41,13 +41,3 @@ the preferred method python evaluation.
     (setq org-babel-python-mode 'python-mode))
 #+end_src
 
-** Use Cython mode
-   :PROPERTIES:
-   :CUSTOM_ID: cython
-   :END:
-#+begin_src emacs-lisp
-(require 'cython-mode)
-(add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
-(add-to-list 'auto-mode-alist '("\\.pxd\\'" . cython-mode))
-(add-to-list 'auto-mode-alist '("\\.pxi\\'" . cython-mode))
-#+end_src
